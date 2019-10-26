@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Página principal</title>
+    </head>
+
+    <body>
+        <!-- Menú colocado en la parte izquierda -->
+        <div class="ui large left fixed blue inverted vertical menu">
+            <div class="item">
+                <!-- Logo de Syscol -->
+                <img href="index.html" class="ui image" src="img/logo.jpg">
+            </div>
+            <a href="instalacion_solicitudes.html" class="item">Instalación</a>
+            <a href="monitoreo.html" class="item">Monitoreo</a>
+            <a href="cobranza.html" class="item">Cobranza</a>
+            <a href="mantenimiento.html" class="item">Mantenimiento</a>
+            <br><br><br>
+            <a href="reportes.html" class="item">Reportes</a>
+            <a href="pendientes.html" class="item">Pendientes</a>
+        </div>
+        
+     
+        <!-- Menú de navegación con botones -->
+        <div class="centrado">
+            <br><br><br>
+            <div class="wrap">   
+                <div class="secciones">
+                    <!--Menu de alarmas-->
+                    <article> 
+                        <label>Buscar señal</label>
+                        <div class="ui calendar">
+                            <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="Fecha">
+                            </div>
+                        </div>
+                        <div class="ui celled grid">
+                            <div class="row">
+                                <div class="twelve wide column">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Cliente</th>
+                                                <th>Señal registrada</th>
+                                                <th>Fecha</th>
+                                                <th>Hora</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="Name">Cliente ejemplo</td>
+                                                <td data-label="Name">Señal ejemplo</td>
+                                                <td data-label="Age">Fecha ejemplo</td>
+                                                <td data-label="Job">Hora ejemplo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--Botones de navegacion de las señales-->
+                                <div class="two wide column">
+                                    <div class="ui vertical labeled icon buttons">
+                                        <button class="ui button" href="#registrar_señal">
+                                            <i class="large angle double right icon"></i>
+                                            Registrar
+                                        </button>
+                                        <button class="ui button" href="#contactar">
+                                            <i class="large address card icon"></i>
+                                            Contactar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </article>
+                    <!-- Formulario registrar señales -->
+                    <article id="registrar_señal">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Registrar señal</h4> 
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">  
+                                    <div class="three wide column">
+                                        <label>Número de cliente</label>
+                                        <select>
+                                            <option selected="true" disabled="disabled">Número</option>
+                                        </select>
+                                    </div>
+                                    <div class="six wide column">
+                                        <label>Tipo de señal</label>
+                                        <select id="tipo">
+                                            <option selected="true" disabled="disabled">Tipo</option>
+                                            <option value="robo">Robo</option>
+                                            <option value="rutina">Rutina</option>
+                                            <option value="sistema">Sistema</option>    
+                                        </select>
+                                    </div> 
+                                </div>
+                            </div>                  
+                        </div>
+                    </article>
+                    <!--Seccion del formulario para alarmas robos-->
+                    <article id="evento_robo">
+                        <div class="ui form">
+                            <h4 class="ui dividing header">Evento</h4> 
+                            <div class="four wide field">
+                                <label>Tipo de evento</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Zona</option>   
+                                </select>
+                            </div> 
+                        </div>
+                        <br>
+                        <button class="ui red submit button ">Cancelar</button>
+                        <button class="ui blue submit button ">Aceptar</button> 
+                    </article>
+                    <!--Seccion del formulario para alarmas de rutinas-->
+                    <article id="evento_rutina">
+                        <div class="ui form">
+                            <h4 class="ui dividing header">Evento</h4> 
+                            <div class="four wide field">
+                                <label>Tipo de evento</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Rutina</option>   
+                                </select>
+                            </div> 
+                            <div class="four wide field">
+                                <label>Usuario</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Usuario</option>   
+                                </select>
+                            </div> 
+                        </div>
+                        <br>
+                        <button class="ui red submit button ">Cancelar</button>
+                        <button class="ui blue submit button ">Aceptar</button> 
+                    </article>
+                    <!--Seccion del formulario alarmas del sistema-->
+                    <article id="evento_sistema">
+                        <div class="ui form">
+                            <h4 class="ui dividing header">Evento</h4> 
+                            <div class="four wide field">
+                                <label>Tipo de evento</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Sistema</option>   
+                                </select>
+                            </div> 
+                        </div>
+                        <br>
+                        <button class="ui red submit button ">Cancelar</button>
+                        <button class="ui blue submit button ">Aceptar</button> 
+                    </article>
+                    <!--Seccion para buscar usuarios de un cliente-->
+                    <article id="contactar">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Contactar cliente</h4>                               
+                            <div class="three wide field">
+                                <label>Número de cliente</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Número</option>
+                                </select>
+                            </div>
+                            <div class="twelve wide column">
+                                <table class="ui celled table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">
+                                                Cliente #100 Rafael Alejadro Ochoa Sandoval 
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th>Teléfono</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr> 
+                                            <td>Usuario 1</td>
+                                            <td>Brayan Alberto Arroyo Chávez</td>
+                                            <td>0123456789</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                
+                        </div>
+                        <br>
+                        <button href="#buscar_contacto"class="ui blue submit button ">Ver contactos</button> 
+                    </article>
+                    <!--Ver los contactos de un cliente-->
+                    <article id="buscar_contacto">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Registrar señal</h4>                               
+                            <div class="twelve wide column">
+                                <table class="ui celled table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">
+                                                Cliente #100 Rafael Alejadro Ochoa Sandoval 
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Contactos del cliente #100</th>
+                                            <th>Teléfono</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr> 
+                                            <td>Contacto 1</td>
+                                            <td>Brayan Alberto Arroyo Chávez</td>
+                                            <td>0123456789</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                
+                        </div>
+                        <br>
+                        <button class="ui blue submit button ">Regresar</button> 
+                    </article>
+                </div>
+            </div>
+        </div>
+
+     <!-- Scripts de JavaScript--> -->
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+     crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <!-- Es el código de JavaScript utilizado en esta página -->
+    <script src="monitoreo.js"></script>
+    </body>
+</html>

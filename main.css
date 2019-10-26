@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.item{
+    font-size: 24px;
+}
+
+.centrado{
+    width: calc(100% - 252px);
+    margin-left: auto;
+}
+
+.menu_navegacion{
+    width: calc(100% - 352px);
+    margin-left: auto;
+    margin-right: 3em;
+}
+
+.wrap{
+	width: 800px;
+	max-width: 90%;
+    margin: auto;
+}
+
+ul.tabs{
+	width: 100%;
+	background: #0A0861;
+	list-style: none;
+	display: flex;
+}
+
+ul.tabs li{
+    width: 100%;
+    border-style: ridge;
+}
+
+ul.tabs li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+
+    display: block;
+    padding: 20px 0px;
+}
+
+.active{
+	background: #363636;
+}
+
+ul.tabs li a .tab-text{
+	margin-left: 8px;
+}
+.secciones{
+	width: 100%;
+	background: #E5E5E5;
+}
+
+.secciones article{
+	padding: 30px;
+}
+
+.secciones article p{
+	text-align: justify;
+}
+
+.formulario{
+	width: calc(100% - 750px);
+	margin-left: auto;
+	margin-right: 252px;
+}
+
+
+@media screen and (max-width: 700px){
+	ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 450px){
+	ul.tabs li a{
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+	}
+
+	.secciones article{
+		padding: 20px;
+	}
+}

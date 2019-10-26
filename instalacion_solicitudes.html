@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Página principal</title>
+    </head>
+
+    <body>
+        <!-- Menú colocado en la parte izquierda -->
+        <div class="ui large left fixed blue inverted vertical menu">
+                <div class="item">
+                    <!-- Logo de Syscol -->
+                    <img href="index.html" class="ui image" src="img/logo.jpg">
+                </div>
+                <a href="instalacion_solicitudes.html" class="item">Instalación</a>
+                <a href="monitoreo.html" class="item">Monitoreo</a>
+                <a href="cobranza.html" class="item">Cobranza</a>
+                <a href="mantenimiento.html" class="item">Mantenimiento</a>
+                <br><br><br>
+                <a href="reportes.html" class="item">Reportes</a>
+                <a href="pendientes.html" class="item">Pendientes</a>
+            </div>
+        </div>
+        
+        <!-- Menú de navegación con botones -->
+        <div class="centrado">
+            <br><br><br>
+            <div class="wrap">
+                <ul class="tabs">
+                    <li><a href="#solicitudes"><span class="tab-text">Solicitudes</span></a></li>
+                    <li><a href="#clientes"></span><span class="tab-text">Clientes</span></a></li>
+                    <li><a href="#inmuebles"></span><span class="tab-text">Inmuebles</span></a></li>
+                </ul>
+                
+                <!-- Contenido de la sección solicitudes -->
+                <div class="secciones">
+                    <article id="solicitudes">
+                        <!-- Segmentos de la sección de solicitudes -->
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Registrar solicitud
+                                <!-- Botón de cada segmento -->
+                                <button href="#registrar_solicitud" class="ui right floated primary button ">
+                                    Registrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                        <!-- Segmentos de la sección de solicitudes pendientes-->
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Reporte de solicitudes pendientes
+                                <button href="#solicitudes_pendientes" class="ui right floated primary button">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Reporte de solicitudes atendidas
+                                <button class="ui right floated primary button "">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                    
+                    <!-- Contenido de la sección clientes -->
+                    </article>
+                    <article id="clientes">
+                        <h1>Clientes</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel voluptates unde, consequuntur aliquid architecto rem numquam expedita minima dolorem pariatur recusandae, eius quod quia aspernatur id impedit, tenetur! Aspernatur incidunt molestiae dolores animi ea praesentium ipsam tenetur voluptas cupiditate perspiciatis eum nihil, natus exercitationem libero earum fuga dignissimos impedit numquam, quasi, placeat officiis voluptates, ad reprehenderit fugiat? Fugiat aperiam et magni, molestiae, numquam consectetur vitae sapiente cupiditate totam laboriosam voluptate obcaecati, aliquam placeat? Suscipit dolores fuga laudantium sed, qui magni iusto dolore quia. Quis fugit exercitationem porro. Rerum nihil omnis recusandae ratione fuga alias eligendi, earum sunt veritatis praesentium eum perspiciatis. Molestias deserunt, iure neque animi quod! Impedit reprehenderit cumque, numquam velit quae cum eius quidem similique laudantium hic deleniti!</p>
+                    </article>
+                    <article id="inmuebles">
+                        <h1>Inmuebles</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea numquam odio voluptate. Aliquam incidunt similique, et quasi ducimus quos aut autem non dignissimos dicta sit provident, voluptatibus ut blanditiis perspiciatis cum, vel temporibus minima enim. Asperiores omnis placeat officiis a tenetur sit recusandae, reprehenderit neque. Tempora quibusdam, perferendis id ratione culpa dolorum! Nemo, animi?</p><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dignissimos at esse, ipsum rerum assumenda nisi obcaecati! Aliquam iure voluptatem incidunt, explicabo sit labore, perferendis eius ad vel quia. Praesentium, doloribus. Quisquam provident nostrum totam itaque debitis, minima, tempore dolores!</p>
+                    </article>
+
+                    <!-- Contenido de la sección de registrar solicitud -->
+                    <article id="registrar_solicitud">
+                        <div class="four wide field">
+                            <label>Tipo de solicitud</label>
+                            <select id="solicitud">
+                                <option selected="true" disabled="disabled">Elija una opción</option>
+                                <option value="0">Primera vez</option>
+                                <option value="1">Normal</option>
+                            </select>
+                        </div>                      
+                    </article>
+                <!--Reporte de solicitudes pendientes-->
+                    <article id="solicitudes_pendientes"> 
+                        <div class="four wide field">
+                            <div class="four wide field">
+                                <label>Tipo de solicitud</label>
+                                <select id="solicitud">
+                                    <option selected="true" disabled="disabled">Elija una opción</option>
+                                    <option value="0">Todas</option>
+                                    <option value="2">Primera vez</option>
+                                    <option value="3">Normal</option>
+                                </select>
+                            </div> 
+                        <div class="ui celled grid">
+                            <div class="row">
+                                <div class="twelve wide column">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre completo</th>
+                                                <th>Fecha</th>
+                                                <th>Hora</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Nombre ejemplo</td>
+                                                <td>Fecha ejemplo</td>
+                                                <td>Hora ejemplo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="two wide column">
+                                    <div class="ui vertical labeled icon buttons">
+                                        <button class="ui button" id="proceder">
+                                            <i class="large angle double right icon"></i>
+                                            Proceder
+                                        </button>
+                                        <button class="ui button" id="boton_detalle">
+                                            <i class="large address card icon"></i>
+                                            Detalle
+                                        </button>
+                                        <button class="ui button" id="boton_editar">
+                                            <i class="large edit icon"></i>
+                                            Editar
+                                        </button>
+                                        <button class="ui button" id="boton_borrar">
+                                            <i class="large trash icon"></i>
+                                            Borrar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="ui blue submit button ">Regresar</button>
+                    
+                        </div>   
+                    </article>
+
+                    <!-- Formulario para las solicitudes de primera vez -->
+                    <article id="solicitudes_primera_vez">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Agregar solicitud de primera vez</h4>                  
+                            <div class="field">
+                                <label>Nombre completo</label>
+                                <input type="text" placeholder="Nombre completo">
+                            </div>
+                            <div class="field">
+                                <label>Domicilio</label>
+                                <input type="text" placeholder="Domicilio">
+                            </div>
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="column">
+                                        <label>Fecha de visita</label>
+                                        <div class="ui calendar" id="example2">
+                                            <div class="ui input left icon">
+                                            <i class="calendar icon"></i>
+                                            <input type="text" placeholder="Fecha">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div>     
+                                    <div class="column">
+                                        <label>Hora de visita</label>
+                                        <div class="ui calendar" id="example3">
+                                            <div class="ui input left icon">
+                                            <i class="time icon"></i>
+                                            <input type="text" placeholder="Hora">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div> 
+                                </div>
+                            </div>
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Aceptar</button>     
+                        </div>
+                    </article>
+
+                    <!-- Formulario para las solicitudes normales -->
+                    <article id="solicitudes_normales">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Agregar solicitud normal</h4>                  
+                            <div class="three wide field">
+                                <label>Número de cliente</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Número</option>
+                                </select>
+                            </div>
+                            <div class="four wide field">
+                                <label>Servicio</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Elija una servicio</option>
+                                    <option value="0">1</option>
+                                    <option value="1">2</option>
+                                </select>
+                            </div>
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                        <div class="column">
+                                            <label>Fecha de visita</label>
+                                            <div class="ui calendar" id="example2">
+                                                <div class="ui input left icon">
+                                                <i class="calendar icon"></i>
+                                                <input type="text" placeholder="Fecha">
+                                                </div>
+                                            </div>
+                                            <br/>
+                                        </div>     
+                                        <div class="column">
+                                            <label>Hora de visita</label>
+                                            <div class="ui calendar" id="example3">
+                                                <div class="ui input left icon">
+                                                <i class="time icon"></i>
+                                                <input type="text" placeholder="Hora">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div> 
+                                </div>
+                            </div>
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Aceptar</button>     
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!--Detalles de la solicitud de primera vez-->
+            <div class="formulario">
+                <div class="ui modal" id="detalle">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        Detalles de solicitud de primera vez
+                    </div>
+                    <div class="content">
+                        <table class="ui definition table">
+                        <tbody>
+                            <tr>
+                                <td class="two wide column">Nombre Completo</td>
+                                <td>Nombre Completo</td>
+                            </tr>
+                            <tr>
+                                <td class="two wide column">Domicilio</td>
+                                <td>Domicilio</td>
+                            </tr>
+                            <tr>
+                                <td class="two wide column">Fecha de visita</td>
+                                <td>Fecha de visita</td>
+                            </tr>
+                            <tr>
+                                <td class="two wide column">Hora de visita</td>
+                                <td>Hora de visita</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="actions">
+                        <div class="ui button">
+                            Regresar
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Confirmacion para borrar solicitud de primera vez-->
+            <div class="formulario">
+                <div class="ui modal" id="borrar">
+                    <div class="header">
+                        Advertencia
+                    </div>
+                    <div class="content">
+                        ¿Esta seguro de eliminar la solicitud seleccionada?
+                    </div>
+                    <div class="actions">
+                        <div class="ui blue submit button">Si</div> 
+                        <div class="ui red submit button">No</div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts de JavaScript--> -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+        <!-- Es el código de JavaScript utilizado en esta página -->
+        <script src="instalacion_solicitudes.js"></script>
+    </body>
+</html>

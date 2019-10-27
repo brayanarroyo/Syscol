@@ -30,28 +30,25 @@ $(document).ready(function(){
         return false;
 	});
 
-	//Cambiar de sección dependiendo de la opción seleccionada de un listbox de tipos de señal
-	var select = document.getElementById('tipo');
-	select.addEventListener('change',
-	function(){
-		switch($(this).val()) {
-			case "robo":
-                $('#evento_rutina').hide();
-                $('#evento_sistema').hide();
-				$('#evento_robo').show();
-			  break;
-			case "rutina":
-                $('#evento_robo').hide();
-                $('#evento_sistema').hide();
-				$('#evento_rutina').show();
-              break;
-            case "sistema":
-                $('#evento_robo').hide();
-                $('#evento_rutina').hide();
-                $('#evento_sistema').show();
-                break;
-		  }
-		return false;
+	//Funcionalidad de los campos de fecha
+	$('.ui.calendar').calendar({
+		type: 'date',
+		monthFirst: false,
+		formatter: {
+			date: function (date, settings) {
+				if (!date) return '';
+				var day = date.getDate();
+				var month = date.getMonth() + 1;
+				var year = date.getFullYear();
+				return day + '/' + month + '/' + year;
+			}
+		}
+	});
+
+	//Funcionalidad de los campos de fecha
+	$('.ui.calendar.time').calendar({
+		ampm: false,
+		type: 'time'
 	});
 
 });

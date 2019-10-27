@@ -43,7 +43,6 @@
                             </h3>
                             <p></p>
                         </div>
-                        <!-- Segmentos de la sección de mantenimiento-->
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
                                 Ordenes pendientes
@@ -53,7 +52,6 @@
                             </h3>
                             <p></p>
                         </div>
-
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
                                 Ordenes atendias
@@ -64,6 +62,7 @@
                             <p></p>
                         </div>
                     </article>
+                    <!--Menu para desplegar las ordenes de trabajo pendientes-->
                     <article id="orden_trabajo_pendientes"> 
                         <div class="ui celled grid">
                             <div class="row">
@@ -93,6 +92,7 @@
                             </div>
                         </div>   
                     </article>
+                    <!--Detalle de las ordenes de trabajo pendientes-->
                     <article id="detalle">
                         <table class="ui definition table">
                             <tbody>
@@ -130,6 +130,7 @@
                         <button class="ui red submit button ">Regresar</button>
                         <button href="#atender" class="ui blue submit button ">Atender</button> 
                     </article>
+                    <!--Sección para atender una orden de trabajo pendiente-->
                     <article id="atender">
                         <table class="ui definition table">
                             <tbody>
@@ -158,19 +159,73 @@
                             </div>
                         </div>
                         <br>
-                        <button class="ui red submit button ">Regresar</button>
+                        <button class="ui red submit button ">Cancelar</button>
                         <button class="ui blue submit button ">Aceptar</button> 
+                    </article>
+                    <!-- Formulario para generar orden de trabajo-->
+                    <article id="registrar_orden_trabajo">
+                        <div class="ui form"> 
+                            <div class="ui form"> 
+                                <h4 class="ui dividing header">Registrar orden de trabajo</h4>                  
+                                <div class="three wide field">
+                                    <label>Número de cliente</label>
+                                    <select>
+                                        <option selected="true" disabled="disabled">Número</option>
+                                    </select>
+                                </div>
+                                <div class="ten wide field">
+                                    <label>Empleado</label>
+                                    <select>
+                                        <option selected="true" disabled="disabled">Empleado</option>
+                                    </select>
+                                </div>
+                                <div class="ui vertically divided grid">
+                                    <div class="two column row">
+                                        <div class="column">
+                                            <label>Fecha de visita</label>
+                                            <div class="ui calendar">
+                                                <div class="ui input left icon">
+                                                    <i class="calendar icon"></i>
+                                                    <input type="text" placeholder="Fecha de visita">
+                                                </div>
+                                            </div>
+                                            <br/>
+                                        </div>     
+                                        <div class="column">
+                                            <label>Hora de visita</label>
+                                            <div class="ui calendar time">
+                                                <div class="ui input left icon">
+                                                    <i class="time icon"></i>
+                                                    <input type="text" placeholder="Hora de visita">
+                                                </div>
+                                            </div>
+                                        <br/>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <br>
+                                <button class="ui red submit button ">Cancelar</button>
+                                <button class="ui blue submit button ">Aceptar</button>     
+                            </div>
+                        </div>
+                    </article>
+                    <article id="orden_trabajo_atendidas">
+                        <h1>Sección en construcción :)</h1>
+                        <button class="ui blue submit button ">Regresar</button> 
                     </article>
                 </div>
             </div>
         </div>
 
-     <!-- Scripts de JavaScript--> -->
-     <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
-     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-     crossorigin="anonymous"></script>
+    <!-- Scripts de JavaScript--> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
     <!-- Es el código de JavaScript utilizado en esta página -->
     <script src="mantenimiento.js"></script>
+    <!-- Script para las fechas -->
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
     </body>
 </html>

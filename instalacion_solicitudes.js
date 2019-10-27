@@ -15,10 +15,8 @@ $(document).ready(function(){
 		var activeTab = $(this).attr('href');
 		$(activeTab).show();
 		return false;
-
+		
 	});
-
-
 
 	//Funcionalidad de los botones en general
 	$('button').click(function(){

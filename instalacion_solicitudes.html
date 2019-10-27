@@ -78,18 +78,17 @@
                     </article>
                     <article id="inmuebles">
                         <h1>Inmuebles</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea numquam odio voluptate. Aliquam incidunt similique, et quasi ducimus quos aut autem non dignissimos dicta sit provident, voluptatibus ut blanditiis perspiciatis cum, vel temporibus minima enim. Asperiores omnis placeat officiis a tenetur sit recusandae, reprehenderit neque. Tempora quibusdam, perferendis id ratione culpa dolorum! Nemo, animi?</p><br>
+                        <p>Lorem ipsum dolor sit, consectetur adipisicing elit. Ea numquam odio voluptate. Aliquam incidunt similique, et quasi ducimus quos aut autem non dignissimos dicta sit provident, voluptatibus ut blanditiis perspiciatis cum, vel temporibus minima enim. Asperiores omnis placeat officiis a tenetur sit recusandae, reprehenderit neque. Tempora quibusdam, perferendis id ratione culpa dolorum! Nemo, animi?</p><br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dignissimos at esse, ipsum rerum assumenda nisi obcaecati! Aliquam iure voluptatem incidunt, explicabo sit labore, perferendis eius ad vel quia. Praesentium, doloribus. Quisquam provident nostrum totam itaque debitis, minima, tempore dolores!</p>
                     </article>
-
                     <!-- Contenido de la sección de registrar solicitud -->
                     <article id="registrar_solicitud">
                         <div class="four wide field">
                             <label>Tipo de solicitud</label>
                             <select id="solicitud">
-                                <option selected="true" disabled="disabled">Elija una opción</option>
-                                <option value="0">Primera vez</option>
-                                <option value="1">Normal</option>
+                                <option value="0" selected="true" disabled="disabled">Elija una opción</option>
+                                <option value="1">Primera vez</option>
+                                <option value="2">Normal</option>
                             </select>
                         </div>                      
                     </article>
@@ -98,9 +97,9 @@
                         <div class="four wide field">
                             <div class="four wide field">
                                 <label>Tipo de solicitud</label>
-                                <select id="solicitud">
-                                    <option selected="true" disabled="disabled">Elija una opción</option>
-                                    <option value="0">Todas</option>
+                                <select id="solicitud_pendiente">
+                                    <option value="0" selected="true" disabled="disabled">Elija una opción</option>
+                                    <option value="1">Todas</option>
                                     <option value="2">Primera vez</option>
                                     <option value="3">Normal</option>
                                 </select>
@@ -150,7 +149,6 @@
                     
                         </div>   
                     </article>
-
                     <!-- Formulario para las solicitudes de primera vez -->
                     <article id="solicitudes_primera_vez">
                         <div class="ui form"> 
@@ -192,7 +190,6 @@
                             <button class="ui blue submit button ">Aceptar</button>     
                         </div>
                     </article>
-
                     <!-- Formulario para las solicitudes normales -->
                     <article id="solicitudes_normales">
                         <div class="ui form"> 

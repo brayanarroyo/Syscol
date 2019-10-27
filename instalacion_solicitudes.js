@@ -6,6 +6,8 @@ $(document).ready(function(){
 
 	//Funcionalidades de la navegación de pestañas
 	$('ul.tabs li a').click(function(){
+		$('#solicitud').val('0');
+		$('#solicitud_pendiente').val('0');
 		$('ul.tabs li a').removeClass('active');
 		$(this).addClass('active');
 		$('.secciones article').hide();
@@ -31,6 +33,8 @@ $(document).ready(function(){
 				if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
 					$('.secciones article').hide();
 					$('.secciones article:first').show();
+					$('#solicitud').val('0');
+					$('#solicitud_pendiente').val('0');
 				}else{
 					$('.secciones article').hide();
 					var activeBut = $(this).attr('href');
@@ -46,16 +50,38 @@ $(document).ready(function(){
 	select.addEventListener('change',
 	function(){
 		switch($(this).val()) {
-			case "0":
+			case "1":
 				$('#solicitudes_normales').hide();
 				$('#solicitudes_primera_vez').show();
 			  break;
-			case "1":
+			case "2":
 				$('#solicitudes_primera_vez').hide();
 				$('#solicitudes_normales').show();
 			  break;
 		  }
 		return false;
 	});
+
+	//Funcionalidad de los campos de fecha
+	$('.ui.calendar').calendar({
+		type: 'date',
+		monthFirst: false,
+		formatter: {
+			date: function (date, settings) {
+				if (!date) return '';
+				var day = date.getDate();
+				var month = date.getMonth() + 1;
+				var year = date.getFullYear();
+				return day + '/' + month + '/' + year;
+			}
+		}
+	});
+
+	//Funcionalidad de los campos de fecha
+	$('.ui.calendar.time').calendar({
+		ampm: false,
+		type: 'time'
+	});
+
 
 });

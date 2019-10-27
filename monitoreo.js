@@ -16,15 +16,14 @@ $(document).ready(function(){
 
 	});
 
-
-
 	//Funcionalidad de los botones en general
 	$('button').click(function(){
         if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
             $('.secciones article').hide();
             $('.secciones article:first').show();
         }else{
-            $('.secciones article').hide();
+			$('#tipo').val('por defecto')
+			$('.secciones article').hide();
             var activeBut = $(this).attr('href');
             $(activeBut).show();
         }

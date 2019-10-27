@@ -6,6 +6,8 @@ $(document).ready(function(){
 
 	//Funcionalidades de la navegación de pestañas
 	$('ul.tabs li a').click(function(){
+		$('#solicitud').val('0');
+		$('#solicitud_pendiente').val('0');
 		$('ul.tabs li a').removeClass('active');
 		$(this).addClass('active');
 		$('.secciones article').hide();

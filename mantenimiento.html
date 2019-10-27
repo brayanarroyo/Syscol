@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Página principal</title>
+    </head>
+
+    <body>
+        <!-- Menú colocado en la parte izquierda -->
+        <div class="ui large left fixed blue inverted vertical menu">
+            <div class="item">
+                <!-- Logo de Syscol -->
+                <img href="index.html" class="ui image" src="img/logo.jpg">
+            </div>
+            <a href="instalacion_solicitudes.html" class="item">Instalación</a>
+            <a href="monitoreo.html" class="item">Monitoreo</a>
+            <a href="cobranza.html" class="item">Cobranza</a>
+            <a href="mantenimiento.html" class="item">Mantenimiento</a>
+            <br><br><br>
+            <a href="reportes.html" class="item">Reportes</a>
+            <a href="pendientes.html" class="item">Pendientes</a>
+        </div>
+        
+     
+        <!-- Menú de navegación con botones -->
+        <div class="centrado">
+            <br><br><br>
+            <div class="wrap">
+                <div class="secciones">
+                    <!--Menu de mantenimiento-->
+                    <article id="solicitudes">
+                        <!-- Segmentos de la sección de mantenimiento -->
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Generar orden de trabajo
+                                <!-- Botón de cada segmento -->
+                                <button href="#registrar_orden_trabajo" class="ui right floated primary button ">
+                                    Registrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                        <!-- Segmentos de la sección de mantenimiento-->
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Ordenes pendientes
+                                <button href="#orden_trabajo_pendientes" class="ui right floated primary button">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Ordenes atendias
+                                <button href="#orden_trabajo_atendidas" class="ui right floated primary button "">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                    </article>
+                    <article id="orden_trabajo_pendientes"> 
+                        <div class="ui celled grid">
+                            <div class="row">
+                                <div class="twelve wide column">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Inmueble</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Lorem ipsum dolor sit amet</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--Botones de navegacion de las señales-->
+                                <div class="two wide column">
+                                    <div class="ui vertical labeled icon buttons">
+                                        <button class="ui button" href="#detalle">
+                                            <i class="large address card icon"></i>
+                                            Detalles
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </article>
+                    <article id="detalle">
+                        <table class="ui definition table">
+                            <tbody>
+                                <tr>
+                                <td>Clave de solicitud</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                <td>Número de cliente</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                <td>Nombre Completo</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                <td>Domicilio</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                <td>Fecha de visita prevista</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                <td>Hora de visita prevista</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                <td>Observaciones</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <button class="ui red submit button ">Regresar</button>
+                        <button href="#atender" class="ui blue submit button ">Atender</button> 
+                    </article>
+                    <article id="atender">
+                        <table class="ui definition table">
+                            <tbody>
+                                <tr>
+                                <td>Clave de solicitud</td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="ui celled table">
+                            <thead>
+                                <tr>
+                                    <th>Se Atendieron y solucionarion los siguientes problemas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel voluptates unde, consequuntur aliquid architecto rem numquam expedita minima dolorem pariatur recusandae, eius quod quia aspernatur id impedit, tenetur! Aspernatur incidunt molestiae dolores animi ea praesentium ipsam tenetur voluptas cupiditate perspiciatis eum nihil, natus exercitationem libero earum fuga dignissimos impedit numquam, quasi, placeat officiis voluptates, ad reprehenderit fugiat? Fugiat aperiam et magni, molestiae. Molestias deserunt, iure neque animi quod! Impedit reprehenderit cumque, numquam velit quae cum eius quidem similique laudantium hic deleniti!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="ui form">
+                            <div class="field">
+                                <label>Observaciones adicionales</label>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="ui red submit button ">Regresar</button>
+                        <button class="ui blue submit button ">Aceptar</button> 
+                    </article>
+                </div>
+            </div>
+        </div>
+
+     <!-- Scripts de JavaScript--> -->
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+     crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <!-- Es el código de JavaScript utilizado en esta página -->
+    <script src="mantenimiento.js"></script>
+    </body>
+</html>

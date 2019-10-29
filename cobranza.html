@@ -21,7 +21,6 @@
             <a href="mantenimiento.html" class="item">Mantenimiento</a>
             <br><br><br>
             <a href="reportes.html" class="item">Reportes</a>
-            <a href="pendientes.html" class="item">Pendientes</a>
         </div>
         
      
@@ -30,7 +29,208 @@
                 <br><br><br>
                 <div class="wrap">
                     <div class="secciones">
-                        <h1>Página en construcción :)</h1>
+                        <article>
+                            <!-- Segmentos de la sección de cobranza -->
+                            <div class="ui segment">
+                                <h3 class="ui left aligned header">
+                                    Pagos pendientes
+                                    <!-- Botón de cada segmento -->
+                                    <button href="#mostrar_pagos_pendientes" class="ui right floated primary button ">
+                                        Mostrar
+                                    </button>
+                                </h3>
+                                <p></p>
+                            </div>
+                            <div class="ui segment">
+                                <h3 class="ui left aligned header">
+                                    Pagos efectuados
+                                    <button href="#mostrar_pagos_efectuados" class="ui right floated primary button">
+                                        Mostrar
+                                    </button>
+                                </h3>
+                                <p></p>
+                            </div>
+                            <div class="ui segment">
+                                <h3 class="ui left aligned header">
+                                    Facturas
+                                    <button href="#Registrar_facturas"class="ui right floated primary button "">
+                                        Registrar
+                                    </button>
+                                </h3>
+                                <p></p>
+                            </div>
+                        </article>
+                        <!--Menu para mostrar los pagos pendientes-->
+                        <article id="mostrar_pagos_pendientes"> 
+                            <div class="ui celled grid">
+                                <div class="row">
+                                    <div class="twelve wide column">
+                                        <table class="ui celled table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Cliente</th>
+                                                    <th>Nombre del cliente</th>
+                                                    <th>Monto</th>
+                                                    <th>Fecha de cobro</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                    <td>Lorem ipsum dolor sit amet</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--Botones de navegacion-->
+                                    <div class="two wide column">
+                                        <div class="ui vertical labeled icon buttons">
+                                            <button class="ui button" href="#detalle">
+                                                <i class="large address card icon"></i>
+                                                Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <br>
+                            <button class="ui blue submit button ">Regresar</button>
+                        </article>
+                        <!--Mostrar detalle de los inmuebles con pagos pendientes-->
+                        <article id="detalle">
+                            <table class="ui definition table">
+                                <tbody>
+                                    <tr>
+                                    <td>Clave de solicitud</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Número de cliente</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Nombre Completo</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Domicilio</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Número de telefono</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Fecha de cobro</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Monto</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Empleado</td>
+                                    <td>
+                                        <div class="ui form">
+                                            <div class="field">
+                                                <select id="empleado">
+                                                <option value="0" selected="true" disabled="disabled">No asignado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <button class="ui red submit button ">Regresar</button>
+                            <button href="#atender" class="ui blue submit button ">Aceptar</button> 
+                        </article>
+                        <!--Mostrar todos los pagos efectuados-->
+                        <article id="mostrar_pagos_efectuados"> 
+                            <div class="ui celled grid">
+                                <div class="field">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Cliente</th>
+                                                <th>Nombre del cliente</th>
+                                                <th>Monto</th>
+                                                <th>Fecha de cobro</th>
+                                                <th>Empleado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Lorem ipsum dolor sit amet</td>
+                                                <td>Lorem ipsum dolor sit amet</td>
+                                                <td>Lorem ipsum dolor sit amet</td>
+                                                <td>Lorem ipsum dolor sit amet</td>
+                                                <td>Lorem ipsum dolor sit amet</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                            <br>
+                            <button class="ui blue submit button ">Regresar</button> 
+                        </article>
+                        <!--Formulario para registrar una solicitud-->
+                        <article id="Registrar_facturas">
+                            <div class="ui form"> 
+                                <h4 class="ui dividing header">Registrar Facturas</h4> 
+                                <div class="ui vertically divided grid">
+                                    <div class="two column row">
+                                        <div class="ten wide column">
+                                            <label>Nombre completo</label>
+                                            <input type="text" placeholder="Nombre completo">
+                                        </div>
+                                        <div class="six wide column">
+                                            <label>RFC</label>
+                                            <input type="text" placeholder="RFC">
+                                        </div>                 
+                                    </div>
+                                </div>
+                                <div class="ui vertically divided grid">
+                                    <div class="three column row">
+                                        <div class="six wide column">
+                                            <label>Calle</label>
+                                            <input type="text" placeholder="Calle">
+                                        </div>
+                                        <div class="six wide column">
+                                            <label>Colonia</label>
+                                            <input type="text" placeholder="Colonia">
+                                        </div>
+                                        <div class="four wide column">
+                                            <label>Código postal</label>
+                                            <input type="text" placeholder="Número">
+                                        </div>     
+                                    </div>
+                                </div>
+                                <div class="ui vertically divided grid">
+                                    <div class="two column row">
+                                        <div class="four wide column">
+                                            <label>No. exterior</label>
+                                            <input type="text" placeholder="Número">
+                                        </div>     
+                                        <div class="four wide column">
+                                            <label>No. interior</label>
+                                            <input type="text" placeholder="Número">
+                                        </div> 
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="four wide field">
+                                    <label>No. Servicio</label>
+                                    <input type="text" placeholder="Solicitud">
+                                </div>
+                                <br>
+                                <button class="ui red submit button ">Cancelar</button>
+                                <button class="ui blue submit button ">Aceptar</button>     
+                            </div>
+                        </article>
                     </div>
                 </div>
         </div>
@@ -41,7 +241,7 @@
     crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
     <!-- Es el código de JavaScript utilizado en esta página -->
-    <script src="mantenimiento.js"></script>
+    <script src="cobranza.js"></script>
     <!-- Script para las fechas -->
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
     </script>

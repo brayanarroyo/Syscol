@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	//Mostrar únicamente la primera sección de la navegación de pestañas
 	$('ul.tabs li a:first').addClass('active');
 	$('.secciones article').hide();

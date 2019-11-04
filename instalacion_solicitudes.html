@@ -42,7 +42,7 @@
                             <h3 class="ui left aligned header">
                                 Registrar solicitud
                                 <!-- Botón de cada segmento -->
-                                <button href="#registrar_solicitud" class="ui right floated primary button ">
+                                <button href="#registrar_solicitud" id="qwe" class="ui right floated primary button ">
                                     Registrar
                                 </button>
                             </h3>
@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="two wide column">
                                     <div class="ui vertical labeled icon buttons">
-                                        <button class="ui button" id="proceder">
+                                        <button onclick="location.href='instalacion.html'" class="ui button" id="proceder">
                                             <i class="large angle double right icon"></i>
                                             Proceder
                                         </button>
@@ -150,15 +150,15 @@
                     </article>
                     <!-- Formulario para las solicitudes de primera vez -->
                     <article id="solicitudes_primera_vez">
-                        <div class="ui form"> 
+                        <form class="ui form" action="instalacion_solicitudes.php" method="POST" > 
                             <h4 class="ui dividing header">Agregar solicitud de primera vez</h4>                  
                             <div class="field">
                                 <label>Nombre completo</label>
-                                <input type="text" placeholder="Nombre completo">
+                                <input name="nombre_sp" type="text" placeholder="Nombre completo">
                             </div>
                             <div class="field">
                                 <label>Domicilio</label>
-                                <input type="text" placeholder="Domicilio">
+                                <input name="domicilio_sp" type="text" placeholder="Domicilio">
                             </div>
                             <div class="ui vertically divided grid">
                                 <div class="two column row">
@@ -167,7 +167,7 @@
                                         <div class="ui calendar" id="standard_calendar">
                                             <div class="ui input left icon">
                                                 <i class="calendar icon"></i>
-                                                <input type="text" placeholder="Fecha de visita">
+                                                <input name="fecha_sp" type="text" placeholder="Fecha de visita">
                                             </div>
                                         </div>
                                         <br/>
@@ -177,7 +177,7 @@
                                         <div class="ui calendar time">
                                             <div class="ui input left icon">
                                             <i class="time icon"></i>
-                                            <input type="text" placeholder="Hora de visita">
+                                            <input name="hora_sp" type="text" placeholder="Hora de visita">
                                             </div>
                                         </div>
                                         <br/>
@@ -186,8 +186,8 @@
                             </div>
                             <br>
                             <button class="ui red submit button ">Cancelar</button>
-                            <button class="ui blue submit button ">Aceptar</button>     
-                        </div>
+                            <input class="ui blue submit button" type="submit" name="submit" value="registrar">     
+                        </form>
                     </article>
                     <!-- Formulario para las solicitudes normales -->
                     <article id="solicitudes_normales">
@@ -195,13 +195,13 @@
                             <h4 class="ui dividing header">Agregar solicitud normal</h4>                  
                             <div class="three wide field">
                                 <label>Número de cliente</label>
-                                <select>
+                                <select id="num_clien_sn">
                                     <option selected="true" disabled="disabled">Número</option>
                                 </select>
                             </div>
                             <div class="four wide field">
                                 <label>Servicio</label>
-                                <select>
+                                <select id="ser_sn">
                                     <option selected="true" disabled="disabled">Elija una servicio</option>
                                     <option value="0">1</option>
                                     <option value="1">2</option>
@@ -214,7 +214,7 @@
                                             <div class="ui calendar">
                                                 <div class="ui input left icon">
                                                     <i class="calendar icon"></i>
-                                                    <input type="text" placeholder="Fecha de visita">
+                                                    <input id="fecha_sn" type="date" placeholder="Fecha de visita">
                                                 </div>
                                             </div>
                                             <br/>
@@ -224,7 +224,7 @@
                                             <div class="ui calendar time">
                                                 <div class="ui input left icon">
                                                     <i class="time icon"></i>
-                                                    <input type="text" placeholder="Hora de visita">
+                                                    <input id="hora_sn" type="text" placeholder="Hora de visita">
                                                 </div>
                                             </div>
                                         <br/>

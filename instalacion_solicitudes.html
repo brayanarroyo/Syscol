@@ -150,7 +150,7 @@
                     </article>
                     <!-- Formulario para las solicitudes de primera vez -->
                     <article id="solicitudes_primera_vez">
-                        <form class="ui form" action="instalacion_solicitudes.php" method="POST" > 
+                        <form id="formulario_sp" class="ui form" > 
                             <h4 class="ui dividing header">Agregar solicitud de primera vez</h4>                  
                             <div class="field">
                                 <label>Nombre completo</label>
@@ -159,6 +159,10 @@
                             <div class="field">
                                 <label>Domicilio</label>
                                 <input name="domicilio_sp" type="text" placeholder="Domicilio">
+                            </div>
+                            <div class="field">
+                                <label>Teléfono</label>
+                                <input name="telefono_sp" type="text" placeholder="telefono">
                             </div>
                             <div class="ui vertically divided grid">
                                 <div class="two column row">
@@ -186,7 +190,7 @@
                             </div>
                             <br>
                             <button class="ui red submit button ">Cancelar</button>
-                            <input class="ui blue submit button" type="submit" name="submit" value="registrar">     
+                            <input class="ui blue submit button" type="submit" value="Registrar">   
                         </form>
                     </article>
                     <!-- Formulario para las solicitudes normales -->

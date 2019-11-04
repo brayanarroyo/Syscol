@@ -82,5 +82,17 @@ $(document).ready(function(){
 		type: 'time'
 	});
 
+	//funcionalidad para insertar en la base de datos
+	var formulario_sp =  document.getElementById('formulario_sp');
+	formulario_sp.addEventListener('submit',function(e){
+		e.preventDefault();
+		
+		console.log("Hello world!");
+		var datos = new FormData(formulario_sp);
+		fetch('consultas/instalacion_solicitudes.php',{
+			method: 'POST',
+			body: datos
+		})
+	});
 
 });

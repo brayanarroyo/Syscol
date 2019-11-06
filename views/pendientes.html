@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="calendario.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Página principal</title>
+    </head>
+
+    <body>
+        <!-- Menú colocado en la parte izquierda -->
+        <div class="ui large left fixed blue inverted vertical menu">
+            <div class="item">
+                <!-- Logo de Syscol -->
+                <a href="index.html"> <img class="ui image" src="img/logo.jpg"></a>
+            </div>
+            <a href="solicitudes.html" class="item">Solicitudes</a>
+            <a href="pendientes.html" class="item">Pendientes</a>
+        </div>
+
+        <!--Menú de trabajo-->
+        <div class="centrado">
+            <br><br><br>
+            <div class="wrap">
+                <!--Secciones que se van a desplegar-->
+                <div class="secciones">
+                    <!--Menú de selección de pendientes-->
+                    <article id="Menu_pendientes">
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Solicitudes de instalación
+                                <button href="#solicitudes_instalacion" id="btn_instalacion" class="ui right floated primary button ">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Solicitudes de monitoreo
+                                <button href="#solicitudes_cotizacion" id="btn_monitoreo" class="ui right floated primary button">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                        <div class="ui segment">
+                            <h3 class="ui left aligned header">
+                                Cotización
+                                <button href="#" id="btn_cotizacion" class="ui right floated primary button "">
+                                    Mostrar
+                                </button>
+                            </h3>
+                            <p></p>
+                        </div>
+                    </article>
+                    <!--Menú para seleccionar el tipo de solicitude pendiente que se quiere realizar-->
+                    <article id="solicitudes_instalacion"> 
+                        <div class="four wide field">
+                            <label>Tipo de solicitud</label>
+                            <select id="solicitud">
+                                <option value="0" selected="true" disabled="disabled">Elija una opción</option>
+                                <option value="Nuevo_cliente">Nuevo cliente</option>
+                                <option value="Nuevo_inmueble">Nuevo inmueble</option>
+                                <option value="Nuevo_servicio">Nuevo servicio</option>
+                            </select>
+                        </div>   
+                        <div class="ui celled grid">
+                            <div class="row">
+                                <div class="twelve wide column">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Folio</th>
+                                                <th>Fecha de visita</th>
+                                                <th>Hora de visita</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Folio ejemplo</td>
+                                                <td>Fecha ejemplo</td>
+                                                <td>Hora ejemplo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <button class="ui blue submit button ">Regresar</button>
+                                </div>
+                                <div class="two wide column">
+                                    <div class="ui vertical labeled icon buttons">
+                                        <button href="#form_cotizar" id="btn_cotizar" class="ui button">
+                                            <i class="large angle double right icon"></i>
+                                            Cotizar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--Menú para comenzar a cotizar las solicitudes de instalacion-->
+                    <article id="form_cotizar">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Cotización</h4>  
+                            <div class="ui celled grid">
+                                <div class="row">    
+                                    <div class="twelve wide column">
+                                        <div class="ui vertically divided grid">
+                                            <div class="two column row">
+                                                <div class="six wide column">
+                                                    <label>Material</label>
+                                                    <select id="material">
+                                                        <option value="0" selected="true" disabled="disabled">Seleccione material</option>
+                                                    </select>
+                                                </div>
+                                                <div class="four wide column">
+                                                    <label>Mano de obra</label>
+                                                    <input id="mano_obra_fc" type="text" placeholder="$0.0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="two wide column">
+                                        <div class="ui vertical labeled icon buttons">
+                                            <button id="btn_cotizar" class="ui button">
+                                                <i class="large angle double right icon"></i>
+                                                Añadir
+                                            </button>
+                                        </div>
+                                    </div>       
+                                </div>
+                            </div>   
+                            <div class="ui celled grid">
+                                <div class="column">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Material</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Material</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>       
+                            </div>                                
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button> 
+                            <button id="confirmar" class="ui blue submit button ">Aceptar</button> 
+                        </div>
+                    </article>
+                    <article>
+                        <div class="formulario">
+                            <div class="ui modal" id="confirmar_cotizacion">
+                                <div class="header">
+                                    Confirmación
+                                </div>
+                                <div class="content">
+                                    <h4>La cotización fue almancenada satisfactoriamente</h4>
+                                    <h4>¿Desea continuar con el registro?</h4>
+                                </div>
+                                <div class="actions">
+                                    <div class="ui blue submit button">Si</div> 
+                                    <div class="ui red submit button">No</div> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--Menú para seleccionar el tipo de solicitude pendiente que se quiere realizar-->
+                    <article id="solicitudes_cotizacion"> 
+                        <div class="four wide field">
+                            <label>Tipo de solicitud</label>
+                            <select id="solicitud">
+                                <option value="0" selected="true" disabled="disabled">Elija una opción</option>
+                                <option value="Nuevo_cliente">Nuevo cliente</option>
+                                <option value="Nuevo_inmueble">Nuevo inmueble</option>
+                                <option value="Nuevo_servicio">Nuevo servicio</option>
+                            </select>
+                        </div>   
+                        <div class="ui celled grid">
+                            <div class="row">
+                                <div class="twelve wide column">
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Folio</th>
+                                                <th>Fecha de visita</th>
+                                                <th>Hora de visita</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Folio ejemplo</td>
+                                                <td>Fecha ejemplo</td>
+                                                <td>Hora ejemplo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <button class="ui blue submit button ">Regresar</button>
+                                </div>
+                                <div class="two wide column">
+                                    <div class="ui vertical labeled icon buttons">
+                                        <button href="#form_cotizar" id="btn_cotizar" class="ui button">
+                                            <i class="large angle double right icon"></i>
+                                            Cotizar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts de JavaScript--> -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+        <!-- Es el código de JavaScript utilizado en esta página -->
+        <script src="js/pendientes.js"></script>
+        <!-- Codigo para el funcionamiento del calendario-->
+        <script src="js/calendario.js"></script>
+    </body>
+</html>

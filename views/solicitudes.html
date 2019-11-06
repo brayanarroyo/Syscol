@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="calendario.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Página principal</title>
+    </head>
+
+    <body>
+        <!-- Menú colocado en la parte izquierda -->
+        <div class="ui large left fixed blue inverted vertical menu">
+            <div class="item">
+                <!-- Logo de Syscol -->
+                <a href="index.html"> <img class="ui image" src="img/logo.jpg"></a>
+            </div>
+            <a href="solicitudes.html" class="item">Solicitudes</a>
+            <a href="pendientes.html" class="item">Pendientes</a>
+        </div>
+
+        <!--Menú de trabajo-->
+        <div class="centrado">
+            <br><br><br>
+            <div class="wrap">
+                <!--Secciones que se van a desplegar-->
+                <div class="secciones">
+                    <article id="Registar_solicitud">
+                        <div class="four wide field">
+                            <label>Tipo de solicitud</label>
+                            <select id="solicitud">
+                                <option value="0" selected="true" disabled="disabled">Elija una opción</option>
+                                <option value="Nuevo_cliente">Nuevo cliente</option>
+                                <option value="Nuevo_inmueble">Nuevo inmueble</option>
+                                <option value="Nuevo_servicio">Nuevo servicio</option>
+                            </select>
+                        </div> 
+                    </article>
+                    <!--Formulario para solicitudes de clientes nuevos-->
+                    <article id="Form_cliente">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Solicitud para nuevo cliente</h4>      
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="column">   
+                                        <label>Nombre completo</label>
+                                        <input id="nombre_fc" type="text" placeholder="Nombre completo">   
+                                    </div>
+                                    <div class="column">
+                                        <label>Domicilio</label>
+                                        <input id="domicilio_fc" type="text" placeholder="Domicilio">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="ui vertically divided grid">
+                                <div class="four column row">
+                                    <div class="four wide column">   
+                                        <label>Teléfono</label>
+                                        <input id="nombre_fc" type="text" placeholder="Nombre completo">   
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Servicio</label>
+                                        <input id="domicilio_fc" type="text" placeholder="Servicio">
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Fecha de visita</label>
+                                        <div class="ui calendar" id="standard_calendar">
+                                            <div class="ui input left icon">
+                                                <i class="calendar icon"></i>
+                                                <input id="fecha_fc" type="text" placeholder="Fecha de visita">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Hora de visita</label>
+                                        <div class="ui calendar time">
+                                            <div class="ui input left icon">
+                                            <i class="time icon"></i>
+                                            <input id="hora_fc" type="text" placeholder="Hora de visita">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div> 
+                                </div>
+                            </div>      
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Registrar</button>    
+                        </div>
+                    </article>
+                    <!--Formulario para solicitudes de clientes que ya estan registrados y quieren realizar una instalación en otro inmueble-->
+                    <article id="Form_inmueble">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Solcitud para nuevo inmueble</h4>      
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="column">   
+                                        <label>Nombre completo  del cliente</label>
+                                        <input id="nombre_fi" type="text" placeholder="Nombre completo">   
+                                    </div>
+                                    <div class="column">
+                                        <label>Domicilio</label>
+                                        <input id="domicilio_fi" type="text" placeholder="Domicilio">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="ui vertically divided grid">
+                                <div class="four column row">
+                                    <div class="four wide column">   
+                                        <label>Teléfono</label>
+                                        <input id="nombre_fi" type="text" placeholder="Nombre completo">   
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Servicio</label>
+                                        <input id="domicilio_fi" type="text" placeholder="Servicio">
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Fecha de visita</label>
+                                        <div class="ui calendar" id="standard_calendar">
+                                            <div class="ui input left icon">
+                                                <i class="calendar icon"></i>
+                                                <input id="fecha_fi" type="text" placeholder="Fecha de visita">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Hora de visita</label>
+                                        <div class="ui calendar time">
+                                            <div class="ui input left icon">
+                                            <i class="time icon"></i>
+                                            <input id="hora_fi" type="text" placeholder="Hora de visita">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div> 
+                                </div>
+                            </div>      
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Registrar</button>    
+                        </div>
+                    </article>
+                    <!--Formulario para solicitudes de clientes que ya estan registrados y quieren añadir un servicio a sus inmuebles-->
+                    <article id="Form_servicio">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Solicitud para añadir un servicio</h4>      
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="four wide column">  
+                                        <label>Número de cliente</label> 
+                                        <select id="num_clien_fs">
+                                            <option selected="true" disabled="disabled">Número</option>
+                                        </select>  
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Servicio</label>
+                                        <input name="domicilio_fc" type="text" placeholder="Servicio">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="four wide column">
+                                        <label>Fecha de visita</label>
+                                        <div class="ui calendar" id="standard_calendar">
+                                            <div class="ui input left icon">
+                                                <i class="calendar icon"></i>
+                                                <input name="fecha_fc" type="text" placeholder="Fecha de visita">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Hora de visita</label>
+                                        <div class="ui calendar time">
+                                            <div class="ui input left icon">
+                                            <i class="time icon"></i>
+                                            <input name="hora_fc" type="text" placeholder="Hora de visita">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                    </div> 
+                                </div>
+                            </div>      
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Registrar</button>    
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts de JavaScript--> -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+        <!-- Es el código de JavaScript utilizado en esta página -->
+        <script src="js/solicitudes.js"></script>
+        <!-- Codigo para el funcionamiento del calendario-->
+        <script src="js/calendario.js"></script>
+    </body>
+</html>

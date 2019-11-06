@@ -19,15 +19,30 @@ $(document).ready(function(){
 
 	//Funcionalidad de los botones en general
 	$('button').click(function(){
-        if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
-            $('.secciones article').hide();
-			$('.secciones article:first').show();
-			$('#solicitud').val('0');
-        }else{
-            $('.secciones article').hide();
-            var activeBut = $(this).attr('href');
-            $(activeBut).show();
-        }
+		switch($(this).attr('id')){
+			case "Registrar":
+				$('#confirmar_solicitud').modal('show');
+			break;
+			case "aceptar_solicitud":
+				$('#confirmar_solicitud').modal('hide');
+				$('#solicitud').val('0');
+				$('#Form_inmueble').hide();
+                $('#Form_servicio').hide();
+                $('#Form_cliente').hide();
+			break;
+			default:
+				if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
+					$('.secciones article').hide();
+					$('.secciones article:first').show();
+					$('#solicitud').val('0');
+				}else{
+					$('.secciones article').hide();
+					var activeBut = $(this).attr('href');
+					$(activeBut).show();
+				}
+				return false;
+			break;
+		}
 	});
 
 	//Cambiar de sección dependiendo de la opción seleccionada de un listbox

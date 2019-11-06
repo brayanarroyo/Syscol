@@ -30,6 +30,11 @@ $(document).ready(function(){
                 $('#confirmar_cotizacion').modal('hide');
                 $('#form_cliente').show();
             break;
+            case "btn_proceder":
+                    $('#principal').hide();
+                $('#ciz').show();
+                $('#form_cliente').show();
+            break;
 			default:
 				if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
 					$('.secciones article').hide();

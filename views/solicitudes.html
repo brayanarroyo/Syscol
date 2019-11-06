@@ -57,11 +57,11 @@
                                 <div class="four column row">
                                     <div class="four wide column">   
                                         <label>Teléfono</label>
-                                        <input id="nombre_fc" type="text" placeholder="Nombre completo">   
+                                        <input id="telefono_fc" type="text" placeholder="Nombre completo">   
                                     </div>
                                     <div class="four wide column">
                                         <label>Servicio</label>
-                                        <input id="domicilio_fc" type="text" placeholder="Servicio">
+                                        <input id="servicio_fc" type="text" placeholder="Servicio">
                                     </div>
                                     <div class="four wide column">
                                         <label>Fecha de visita</label>
@@ -87,7 +87,7 @@
                             </div>      
                             <br>
                             <button class="ui red submit button ">Cancelar</button>
-                            <button class="ui blue submit button ">Registrar</button>    
+                            <button id="Registrar" class="ui blue submit button ">Registrar</button>    
                         </div>
                     </article>
                     <!--Formulario para solicitudes de clientes que ya estan registrados y quieren realizar una instalación en otro inmueble-->
@@ -140,7 +140,7 @@
                             </div>      
                             <br>
                             <button class="ui red submit button ">Cancelar</button>
-                            <button class="ui blue submit button ">Registrar</button>    
+                            <button id="Registrar" class="ui blue submit button ">Registrar</button>    
                         </div>
                     </article>
                     <!--Formulario para solicitudes de clientes que ya estan registrados y quieren añadir un servicio a sus inmuebles-->
@@ -148,9 +148,13 @@
                         <div class="ui form"> 
                             <h4 class="ui dividing header">Solicitud para añadir un servicio</h4>      
                             <div class="ui vertically divided grid">
-                                <div class="two column row">
+                                <div class="three column row">
+                                    <div class="column">   
+                                        <label>Nombre completo  del cliente</label>
+                                        <input id="nombre_fi" type="text" placeholder="Nombre completo">   
+                                    </div>
                                     <div class="four wide column">  
-                                        <label>Número de cliente</label> 
+                                        <label>Número de inmueble</label> 
                                         <select id="num_clien_fs">
                                             <option selected="true" disabled="disabled">Número</option>
                                         </select>  
@@ -187,7 +191,24 @@
                             </div>      
                             <br>
                             <button class="ui red submit button ">Cancelar</button>
-                            <button class="ui blue submit button ">Registrar</button>    
+                            <button id="Registrar" class="ui blue submit button ">Registrar</button>    
+                        </div>
+                    </article>
+                    <!--Modal para cuando se registra una solicitud-->
+                    <article>
+                        <div class="formulario">
+                            <div class="ui modal" id="confirmar_solicitud">
+                                <div class="header">
+                                    Confirmación
+                                </div>
+                                <div class="content">
+                                    <h4>La solicitud fue almacenada satisfactoriamente</h4>
+                                    <h4>Para continuar con el proceso de la solicitud diríjase a la sección de pendientes</h4>
+                                </div>
+                                <div class="actions">
+                                    <button id="aceptar_solicitud" class="ui blue submit button">Aceptar</button> 
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>

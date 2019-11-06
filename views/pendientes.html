@@ -39,8 +39,8 @@
                         </div>
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
-                                Solicitudes de monitoreo
-                                <button href="#solicitudes_cotizacion" id="btn_monitoreo" class="ui right floated primary button">
+                                Cotización
+                                <button href="#solicitudes_cotizacion" id="btn_cotizacion" class="ui right floated primary button "">
                                     Mostrar
                                 </button>
                             </h3>
@@ -48,8 +48,8 @@
                         </div>
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
-                                Cotización
-                                <button href="#" id="btn_cotizacion" class="ui right floated primary button "">
+                                Solicitudes de monitoreo
+                                <button href="#" id="btn_monitoreo" class="ui right floated primary button">
                                     Mostrar
                                 </button>
                             </h3>
@@ -154,6 +154,7 @@
                             <button id="confirmar" class="ui blue submit button ">Aceptar</button> 
                         </div>
                     </article>
+                    <!--Modal para cuando se acepta la cotización-->
                     <article>
                         <div class="formulario">
                             <div class="ui modal" id="confirmar_cotizacion">
@@ -161,7 +162,7 @@
                                     Confirmación
                                 </div>
                                 <div class="content">
-                                    <h4>La cotización fue almancenada satisfactoriamente</h4>
+                                    <h4>La cotización fue almacenada satisfactoriamente</h4>
                                     <h4>¿Desea continuar con el registro?</h4>
                                 </div>
                                 <div class="actions">
@@ -196,7 +197,7 @@
                                 </div>
                                 <div class="two wide column">
                                     <div class="ui vertical labeled icon buttons">
-                                        <button href="#formulario_ciz" id="btn_cotizar" class="ui button">
+                                        <button href="#ciz" id="btn_proceder" class="ui button">
                                             <i class="large angle double right icon"></i>
                                             Proceder
                                         </button>
@@ -208,6 +209,7 @@
                 </div>
             </div>
         </div>
+        <!--División-->
         <div class="centrado">
             <br><br><br>
             <div class="wrap" id="ciz">
@@ -250,8 +252,7 @@
                                 </div>
                             </div>      
                             <br>
-                            <button class="ui red submit button ">Cancelar</button>
-                            <button class="ui blue submit button ">Registrar</button>    
+                            <button class="ui blue submit button ">Guardar</button>    
                         </div>
                     </article>
                     <article id="form_inmueble">
@@ -298,12 +299,39 @@
                                 </div>
                             </div  
                             <br>
-                            <button class="ui red submit button ">Cancelar</button>
-                            <button class="ui blue submit button ">Registrar</button>    
+                            <button class="ui blue submit button ">Guardar</button>    
                         </div>
                     </article>
                     <article id="form_zonas">
+                        <div class="ui form">
+                                <table class="ui celled table">
+                                    <thead>
+                                        <tr>
+                                            <th>Material</th>
+                                            <th>Zona</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="field">
+                                                    <select id="material_zona">
+                                                    <option value="0" selected="true" disabled="disabled">No asignado</option>
+                                                    </select>
+                                                </div>    
+                                            </td>
+                                            <td>
+                                                <div class="four wide column">   
 
+                                                    <input id="zona_zona" type="text" placeholder="Estado">   
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            <br>
+                            <button href="#atender" class="ui blue submit button ">Finalizar</button> 
+                        </div>
                     </article>
                 </div>
             </div>

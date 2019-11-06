@@ -67,7 +67,8 @@
                                 <option value="Nuevo_servicio">Nuevo servicio</option>
                             </select>
                         </div>   
-                        <div class="ui celled grid">
+                        <h4 class="ui dividing header">Solicitudes pendientes</h4>
+                        <div class="ui celled grid">  
                             <div class="row">
                                 <div class="twelve wide column">
                                     <table class="ui celled table">
@@ -170,17 +171,9 @@
                             </div>
                         </div>
                     </article>
-                    <!--Menú para seleccionar el tipo de solicitude pendiente que se quiere realizar-->
+                    <!--Menú para para mostrar las cotizaciones pendientes-->
                     <article id="solicitudes_cotizacion"> 
-                        <div class="four wide field">
-                            <label>Tipo de solicitud</label>
-                            <select id="solicitud">
-                                <option value="0" selected="true" disabled="disabled">Elija una opción</option>
-                                <option value="Nuevo_cliente">Nuevo cliente</option>
-                                <option value="Nuevo_inmueble">Nuevo inmueble</option>
-                                <option value="Nuevo_servicio">Nuevo servicio</option>
-                            </select>
-                        </div>   
+                        <h4 class="ui dividing header">Cotizaciones pendientes</h4>
                         <div class="ui celled grid">
                             <div class="row">
                                 <div class="twelve wide column">
@@ -188,15 +181,13 @@
                                         <thead>
                                             <tr>
                                                 <th>Folio</th>
-                                                <th>Fecha de visita</th>
-                                                <th>Hora de visita</th>
+                                                <th>Monto total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Folio ejemplo</td>
-                                                <td>Fecha ejemplo</td>
-                                                <td>Hora ejemplo</td>
+                                                <td>Monto ejemplo</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -205,9 +196,9 @@
                                 </div>
                                 <div class="two wide column">
                                     <div class="ui vertical labeled icon buttons">
-                                        <button href="#form_cotizar" id="btn_cotizar" class="ui button">
+                                        <button href="#formulario_ciz" id="btn_cotizar" class="ui button">
                                             <i class="large angle double right icon"></i>
-                                            Cotizar
+                                            Proceder
                                         </button>
                                     </div>
                                 </div>
@@ -217,6 +208,108 @@
                 </div>
             </div>
         </div>
+        <div class="centrado">
+            <br><br><br>
+            <div class="wrap">
+                <ul class="tabs">
+                    <li><a href="#form_cliente"><span class="tab-text">Cliente</span></a></li>
+                    <li><a href="#form_inmueble"></span><span class="tab-text">Inmueble</span></a></li>
+                    <li><a href="#form_zonas"></span><span class="tab-text">Zonas</span></a></li>
+                </ul>
+                <!--Secciones que se van a desplegar-->
+                <div class="secciones">
+                    <article id="form_cliente">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Solicitud para nuevo cliente</h4>      
+                            <div class="ui vertically divided grid">
+                                <div class="three column row">
+                                    <div class="column">   
+                                        <label>Nombre</label>
+                                        <input id="nombre_fc" type="text" placeholder="Nombre">   
+                                    </div>
+                                    <div class="column">
+                                        <label>Apellido paterno</label>
+                                        <input id="apellido_p_fc" type="text" placeholder="Apellido">
+                                    </div>
+                                    <div class="column">
+                                        <label>Apellido materno</label>
+                                        <input id="apellido_m_fc" type="text" placeholder="Apellido">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="four wide column">   
+                                        <label>Correo electronico</label>
+                                        <input id="correo_fc" type="text" placeholder="correo@correo.com">   
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Teléfono</label>
+                                        <input id="telefono_fc" type="text" placeholder="Número">
+                                    </div>
+                                </div>
+                            </div>      
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Registrar</button>    
+                        </div>
+                    </article>
+                    <article id="form_inmueble">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Solicitud para nuevo cliente</h4>      
+                            <div class="ui vertically divided grid">
+                                <div class="three column row">
+                                    <div class="six wide column">   
+                                        <label>Calle</label>
+                                        <input id="calle_fi" type="text" placeholder="Calle">   
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Número interior</label>
+                                        <input id="num_int_fi" type="text" placeholder="Número">
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Número exterior</label>
+                                        <input id="num_ext_fi" type="text" placeholder="Número">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="six wide column">   
+                                        <label>Colonia</label>
+                                        <input id="colonia_fi" type="text" placeholder="Colonia">   
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Código postal</label>
+                                        <input id="codigo_fi" type="text" placeholder="#####">
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="ui vertically divided grid">
+                                <div class="two column row">
+                                    <div class="four wide column">   
+                                        <label>Estado de la republica</label>
+                                        <input id="estado_fi" type="text" placeholder="Estado">   
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Municipio</label>
+                                        <input id="municipio_fi" type="text" placeholder="Municipio">
+                                    </div>
+                                </div>
+                            </div  
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Registrar</button>    
+                        </div>
+                    </article>
+                    <article id="form_zonas">
+
+                    </article>
+                </div>
+            </div>
+        </div>
+
+         
         <!-- Scripts de JavaScript--> -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

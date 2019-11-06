@@ -2,7 +2,8 @@ $(document).ready(function(){
 
 	//Mostrar únicamente la primera sección de la navegación de pestañas
 	$('ul.tabs li a:first').addClass('active');
-	$('.secciones article').hide();
+    $('.secciones article').hide();
+    $('#ciz').hide();
 	$('.secciones article:first').show();
 
 	//Funcionalidades de la navegación de pestañas
@@ -22,7 +23,13 @@ $(document).ready(function(){
         switch($(this).attr('id')){
 			case "confirmar":
 				$('#confirmar_cotizacion').modal('show');
-			break;
+            break;
+            case "si":
+                $('#principal').hide();
+                $('#ciz').show();
+                $('#confirmar_cotizacion').modal('hide');
+                $('#form_cliente').show();
+            break;
 			default:
 				if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
 					$('.secciones article').hide();

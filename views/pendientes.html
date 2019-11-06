@@ -49,7 +49,7 @@
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
                                 Solicitudes de monitoreo
-                                <button href="#" id="btn_monitoreo" class="ui right floated primary button">
+                                <button href="#solicitudes_monitoreo" id="btn_monitoreo" class="ui right floated primary button">
                                     Mostrar
                                 </button>
                             </h3>
@@ -157,7 +157,7 @@
                     <!--Modal para cuando se acepta la cotización-->
                     <article>
                         <div class="formulario">
-                            <div class="ui modal" id="confirmar_cotizacion">
+                            <div class="ui tiny modal" id="confirmar_cotizacion">
                                 <div class="header">
                                     Confirmación
                                 </div>
@@ -205,6 +205,9 @@
                                 </div>
                             </div>
                         </div>
+                    </article>
+                    <article id="solicitudes_monitoreo">
+                        <h1>Trabajando en la funcionalidad de la base de datos ),:</h1>
                     </article>
                 </div>
             </div>
@@ -275,7 +278,7 @@
                                 </div>
                             </div> 
                             <div class="ui vertically divided grid">
-                                <div class="two column row">
+                                <div class="three column row">
                                     <div class="six wide column">   
                                         <label>Colonia</label>
                                         <input id="colonia_fi" type="text" placeholder="Colonia">   
@@ -283,6 +286,12 @@
                                     <div class="four wide column">
                                         <label>Código postal</label>
                                         <input id="codigo_fi" type="text" placeholder="#####">
+                                    </div>
+                                    <div class="four wide column">
+                                        <label>Tipo inmueble</label>
+                                        <select id="tipo_inmueble">
+                                            <option value="0" selected="true" disabled="disabled">Elija tipo</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>    
@@ -297,7 +306,7 @@
                                         <input id="municipio_fi" type="text" placeholder="Municipio">
                                     </div>
                                 </div>
-                            </div  
+                            </div >
                             <br>
                             <button class="ui blue submit button ">Guardar</button>    
                         </div>
@@ -332,6 +341,9 @@
                             <br>
                             <button href="#atender" class="ui blue submit button ">Finalizar</button> 
                         </div>
+                    </article>
+                    <article>
+                        
                     </article>
                 </div>
             </div>
